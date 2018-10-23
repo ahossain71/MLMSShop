@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><ejb-jar id="ejb-jar_ID" version="3.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd">
+    <enterprise-beans>
+        <session>
+            <ejb-name>ShopXMLFileProcess</ejb-name>
+            <ejb-class>gov.mlms.cciio.cms.fileProcess.ejb.schedule.ShopXMLFileProcess</ejb-class>
+            <session-type>Stateless</session-type>
+            <timeout-method>
+                <method-name>processFiles</method-name>
+                <method-params>
+                    <method-param>javax.ejb.Timer</method-param>
+                </method-params>
+            </timeout-method>
+            <concurrency-management-type>Container</concurrency-management-type>
+            <local-bean/>
+            <resource-env-ref>
+                <resource-env-ref-name>gov.mlms.cciio.cms.fileProcess.ejb.schedule.ShopXMLFileProcess/timerService</resource-env-ref-name>
+                <resource-env-ref-type>javax.ejb.TimerService</resource-env-ref-type>
+                <injection-target>
+                    <injection-target-class>gov.mlms.cciio.cms.fileProcess.ejb.schedule.ShopXMLFileProcess</injection-target-class>
+                    <injection-target-name>timerService</injection-target-name>
+                </injection-target>
+            </resource-env-ref>
+            <post-construct>
+                <lifecycle-callback-class>gov.mlms.cciio.cms.fileProcess.ejb.schedule.ShopXMLFileProcess</lifecycle-callback-class>
+                <lifecycle-callback-method>createTimer</lifecycle-callback-method>
+            </post-construct>
+        </session>
+    </enterprise-beans>
+    <assembly-descriptor/>
+</ejb-jar>
