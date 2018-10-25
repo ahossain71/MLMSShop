@@ -1,1 +1,1 @@
-ant -f build.xml -propertyfile build-DEV.properties
+ant -f ~/buildscripts/build.xml -propertyfile ~/buildscripts/build-DEV.properties
