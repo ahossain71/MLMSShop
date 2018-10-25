@@ -85,7 +85,6 @@
 			<!--<property name="websphere.base" value="${websphere.base}"/>-->
 			<!--<property name="compiler.path" value="${compiler.path}"/>-->
 		<!--</ant>-->
--
 	</target>
 	
 	<target name="compile" depends="clean">
