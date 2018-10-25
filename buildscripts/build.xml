@@ -36,7 +36,7 @@
 	
 	<property name="CLIENT_EAR" value="MLMSShopXML.ear" />
 
-	<!--<property name="user.name" value="anu"/>-->
+	<!--<property name="user.name" value="anu"/> -->
 	<!--Commenting out logging properties as logging project is not included in the source provided-->
 	<!--	
 	<property name="wslogging.project" value="mlms_ws_transaction_logging" />
@@ -74,15 +74,18 @@
 		<delete dir="${build.dir}" />
 		<delete dir="${dist.dir}" />
 	</target>
-
+	
 	<target name="wslogging-jar">
 		<!-- inheritall = false so that it would not use current project directory as the basedir of the other ant call -->
 		<!-- Will need to explicitly pass on the values of the two parameters over -->
-		<ant antfile="${wslogging.project.dir}/buildscripts/build.xml" dir="${wslogging.project.dir}/buildscripts/" target="jar" inheritall="false">
+<!-- Commenting out as wslogging project doesnot exist in teh source provoded-->
+<!--		
+<ant antfile="${wslogging.project.dir}/buildscripts/build.xml" dir="${wslogging.project.dir}/buildscripts/" target="jar" inheritall="false">-->
 			<!--<property file="config/subproject/default.properties"/>-->
-			<property name="websphere.base" value="${websphere.base}"/>
-			<property name="compiler.path" value="${compiler.path}"/>
-		</ant>
+			<!--<property name="websphere.base" value="${websphere.base}"/>-->
+			<!--<property name="compiler.path" value="${compiler.path}"/>-->
+		<!--</ant>-->
+-
 	</target>
 	
 	<target name="compile" depends="clean">
