@@ -1,2 +1,0 @@
-set ts [$AdminControl completeObjectName cell=@CellName@,node=@NodeName@,type=TraceService,process=@ServerName@,*]
-$AdminControl setAttribute $ts traceSpecification @TraceSpecification@

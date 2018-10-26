@@ -1,1 +1,0 @@
-@jextract.command@ @core.path@

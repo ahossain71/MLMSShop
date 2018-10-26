@@ -1,9 +1,0 @@
-#!/bin/sh
-
-#try to call setupCMDLine
-if [ -r "../bin/setupCmdLine" ]; then
-cd ../bin
-. ./setupCmdLine
-fi
-
-cd ${AUTOPD_HOME}

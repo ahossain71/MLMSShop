@@ -1,2 +1,0 @@
-set jvm [$AdminControl completeObjectName type=JVM,process=@ServerName@,*]
-$AdminControl invoke $jvm dumpThreads
